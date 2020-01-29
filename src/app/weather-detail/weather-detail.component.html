@@ -1,0 +1,54 @@
+<div>
+    <div class="row list-item">
+        <div class="col">
+            <p>{{ weather.dt_txt }}</p>
+            <p>Today</p>
+        </div>
+        <div class="col">
+            <p>
+                <span class="deg">{{ weather.main.temp }} deg</span>
+                <span class="deg">5.4 deg</span>
+                {{ weather.weather[0].description }}
+            </p>
+            <p>{{ weather.wind.speed }} m/s</p>
+            <p>clouds: 17%, 997 hpa</p>
+        </div>
+    </div>
+    <div class="row">
+        <table class="tg">
+            <tr>
+              <th class="tg-0lax"><span style="font-weight:700">Temp</span></th>
+              <th class="tg-0lax"><span style="font-weight:bold">Min Temp</span></th>
+              <th class="tg-0lax"><span style="font-weight:bold">Max Temp</span></th>
+              <th class="tg-0lax"><span style="font-weight:bold">Pressure</span></th>
+              <th class="tg-0lax"><span style="font-weight:700">Sea Level</span></th>
+              <th class="tg-0lax"><span style="font-weight:700">Grnd Level</span></th>
+              <th class="tg-0lax"><span style="font-weight:700">Humidity</span></th>
+              <th class="tg-0lax"><span style="font-weight:700">Temp kf</span></th>
+            </tr>
+            <tr>
+            <td class="tg-0lax">{{weather.main.temp}}</td>
+              <td class="tg-0lax">{{weather.main.temp_min}}</td>
+              <td class="tg-0lax">{{weather.main.temp_max}}</td>
+              <td class="tg-0lax">{{weather.main.pressure}}</td>
+              <td class="tg-0lax">{{weather.main.sea_level}}</td>
+              <td class="tg-0lax">{{weather.main.grnd_level}}</td>
+              <td class="tg-0lax">{{weather.main.humidity}}</td>
+              <td class="tg-0lax">{{weather.main.temp_kf}}</td>
+            </tr>
+          </table>
+    </div>    
+
+    <div class="row">
+        <a (click)="goBack()" class="btn">Go Back</a>
+    </div>
+</div>
+
+<!-- temp: 278.76,
+temp_min: 278.76,
+temp_max: 279.558,
+pressure: 1031.934,
+sea_level: 1031.934,
+grnd_level: 971.745,
+humidity: 100,
+temp_kf: -0.8, -->

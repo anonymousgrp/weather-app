@@ -1,0 +1,21 @@
+
+<ul>
+    <li *ngFor="let weather of weathers">
+            <div class="row list-item" (click)="onWeatherClicked(weather)">
+                <div class="col">
+                    <p>{{ weather.dt_txt.split(' ')[0] }}</p>
+                    <p>Today</p>
+                </div>
+                <div class="col">
+                    <p>
+                        <span class="deg">{{ weather.main.temp }} deg</span>
+                        <span class="deg">5.4 deg</span>
+                        {{ weather.weather[0].description }}
+                    </p>
+                    <p>{{ weather.wind.speed }} m/s</p>
+                    <p>clouds: 17%, 997 hpa</p>
+                </div>
+            </div>
+    </li>
+</ul>
+
